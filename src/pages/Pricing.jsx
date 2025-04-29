@@ -2,6 +2,11 @@ import React from 'react';
 import PricingCard from '../components/ui/PricingCard.jsx';
 
 const Pricing = () => {
+  const [selectedPlan, setSelectedPlan] = React.useState(null);
+
+  const handlePlanSelect = (planIndex) => {
+    setSelectedPlan(planIndex === selectedPlan ? null : planIndex);
+  };
   const pricingPlans = [
     {
       title: "Basic",
@@ -28,7 +33,7 @@ const Pricing = () => {
         "Priority customer support",
         "Monthly gaming credits"
       ],
-      isPopular: true
+      isPopular: false
     },
     {
       title: "Ultimate",
@@ -71,6 +76,8 @@ const Pricing = () => {
               period={plan.period}
               features={plan.features}
               isPopular={plan.isPopular}
+              isSelected={selectedPlan === index}
+              onClick={() => handlePlanSelect(index)}
             />
           ))}
         </div>
@@ -118,6 +125,13 @@ const Pricing = () => {
           </div>
         </div>
       </div>
+      
+      {/* Footer */}
+      <footer className="bg-gray-900 text-white py-6">
+        <div className="container mx-auto px-4 text-center">
+          <p>&copy; 2025 GameVerse. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
   );
 };
