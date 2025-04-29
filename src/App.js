@@ -1,10 +1,11 @@
 import React from 'react';
 import Navbar from './components/layout/Navbar';
-
+import Home from './pages/Home';
 function App() {
   return (
     <div className="min-h-screen">
       <Navbar />
+      <Home/>
       <main className="py-8">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl font-bold mb-6">Welcome to GameVerse</h1>
