@@ -7,7 +7,7 @@ function App() {
     <div className="min-h-screen">
     
       <Navbar />
-    <Home/>
+      <Home/>
       <Layout/>
       
       <main className="py-8">
