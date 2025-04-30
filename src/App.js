@@ -2,6 +2,7 @@ import React from 'react';
 import Navbar from './components/layout/Navbar';
 import Layout from './components/layout/Layout.jsx';
 import Home from './pages/Home';
+import BlogSection from './pages/BlogSection.jsx';
 function App() {
   return (
     <div className="min-h-screen">
@@ -9,6 +10,8 @@ function App() {
       <Navbar />
     <Home/>
       <Layout/>
+      <BlogSection />
+
       
       <main className="py-8">
         <div className="container mx-auto px-4">
