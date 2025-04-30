@@ -7,6 +7,7 @@ import About from './pages/About';
 import Features from './pages/Features';
 import Pricing from './pages/Pricing';
 import AllBlogs from './pages/AllBlogs';
+import Footer from './components/layout/Footer';
 
 function App() {
   return (
@@ -37,11 +38,7 @@ function App() {
           <Route path="/blogs" element={<AllBlogs />} />
         </Routes>
 
-        <footer className="bg-gray-900 text-white py-6">
-          <div className="container mx-auto px-4 text-center">
-            <p>&copy; 2025 GameVerse. All rights reserved.</p>
-          </div>
-        </footer>
+        <Footer />
       </div>
     </Router>
   );
