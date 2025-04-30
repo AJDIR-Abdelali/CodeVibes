@@ -36,12 +36,12 @@ const Features = ( )=>{
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
             <div key={index} className="bg-white p-6 rounded-lg shadow hover:shadow-lg transition text-center">
-                              <img
+                <img
                 src={feature.image}
                 alt={feature.title}
-                className="mx-auto mb-4 h-16 w-16 object-cover rounded-full"
+                className="mx-auto mb-4 h-24 w-24 object-cover rounded-full"
               />
-              <h3 className="text-xl font-semibold text-center text-red-600 mb-2">{feature.title}</h3>
+              <h3 className="text-xl font-semibold text-center text-blue-600 mb-2">{feature.title}</h3>
               <p className="text-gray-700">{feature.description}</p>
             </div>
           ))}
