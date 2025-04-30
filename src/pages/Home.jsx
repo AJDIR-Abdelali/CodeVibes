@@ -18,7 +18,7 @@ const Home = () => {
       <div className="absolute inset-0  bg-opacity-60"></div>
       <div className="relative z-10 max-w-4xl mx-auto text-center">
         <h2 className="text-4xl font-extrabold sm:text-5xl mb-4 text-gray-700">
-          Join Our Quest — We’re Hiring!
+        Your Next Adventure Awaits — Apply Now!
         </h2>
         <p className="text-lg sm:text-xl mb-8 text-gray-700">
           Passionate about gaming, storytelling, or coding? Team up with GameVerse and help us build the ultimate gaming blog experience.
