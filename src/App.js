@@ -9,6 +9,8 @@ import Pricing from './pages/Pricing';
 import AllBlogs from './pages/AllBlogs';
 import Footer from './components/layout/Footer';
 import Blog1Page from './pages/Blog1Page';
+import Form from './pages/Form'; 
+
 
 
 
@@ -42,6 +44,9 @@ function App() {
 
           <Route path="/blogs" element={<AllBlogs />} />
           <Route path="/blogs/:blogId" element={<Blog1Page />} />
+          <Route path="/create-blog" element={<Form />} />
+
+          
         </Routes>
 
         <Footer />
