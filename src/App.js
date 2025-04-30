@@ -8,7 +8,7 @@ function App() {
     <div className="min-h-screen">
     
       <Navbar />
-    <Home/>
+      <Home/>
       <Layout/>
       <BlogSection />
 
