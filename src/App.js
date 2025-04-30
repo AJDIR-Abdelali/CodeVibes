@@ -8,6 +8,10 @@ import Features from './pages/Features';
 import Pricing from './pages/Pricing';
 import AllBlogs from './pages/AllBlogs';
 import Footer from './components/layout/Footer';
+import Blog1Page from './pages/Blog1Page';
+
+
+
 
 function App() {
   return (
@@ -19,6 +23,7 @@ function App() {
             path="/"
             element={
               <>
+              
                 <Home />
                 <About />
                 <Features/>
@@ -36,6 +41,7 @@ function App() {
           />
 
           <Route path="/blogs" element={<AllBlogs />} />
+          <Route path="/blogs/:blogId" element={<Blog1Page />} />
         </Routes>
 
         <Footer />

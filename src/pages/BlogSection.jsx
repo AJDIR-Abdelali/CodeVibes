@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+
 
 // Import your local images
 import blog1 from '../assets/images/indie games.jpg';
@@ -8,6 +9,8 @@ import blog3 from '../assets/images/blog3.jpg';
 import blog4 from '../assets/images/blog4.jpg';
 import blog5 from '../assets/images/blog5.jpg';
 import blog6 from '../assets/images/blog6.jpg';
+
+
 
 // Blog data array with imported images
 const blogs = [
@@ -51,6 +54,7 @@ const blogs = [
 
 const BlogSection = () => {
   const [visibleBlogs, setVisibleBlogs] = useState(3); // Show first 3 initially
+  const navigate = useNavigate();
 
   const loadMoreBlogs = () => {
     setVisibleBlogs(prev => {
@@ -61,6 +65,9 @@ const BlogSection = () => {
       return newCount;
     });
   };
+  const goToBlog = (id) => {
+    navigate(`/blogs/${id}`)
+  }
 
   const allBlogsVisible = visibleBlogs >= blogs.length;
 
@@ -71,11 +78,17 @@ const BlogSection = () => {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {blogs.slice(0, visibleBlogs).map(blog => (
-            <div key={blog.id} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
+            <div key={blog.id} onClick={goToBlog(blog.id)} className="bg-white shadow-md rounded-lg overflow-hidden hover:shadow-xl transition">
               <img src={blog.image} alt={blog.title} className="h-48 w-full object-cover" />
               <div className="p-5">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{blog.title}</h3>
                 <p className="text-gray-600 text-sm">{blog.description}</p>
+                {/* <button
+                  onClick={() => goToBlog(blog.id)}
+                  className="mt-4 text-indigo-600 hover:text-indigo-500 focus:outline-none transition"
+                >
+                  Read More
+                </button> */}
               </div>
             </div>
           ))}

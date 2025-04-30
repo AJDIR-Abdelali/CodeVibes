@@ -1,5 +1,6 @@
 // src/pages/AllBlogs.jsx
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 // Réutilise les imports d'images
 import blog1 from '../assets/images/indie games.jpg';
@@ -19,13 +20,17 @@ const blogs = [
 ];
 
 const AllBlogs = () => {
+  const navigate = useNavigate();
+  const goToBlog = (id) => {
+    navigate(`/blogs/${id}`)
+  }
   return (
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-12 text-gray-800">All Blog Posts</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
           {blogs.map(blog => (
-            <div key={blog.id} className="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
+            <div key={blog.id} onClick={() => goToBlog(blog.id)} className="bg-gray-100 rounded-lg overflow-hidden shadow-md hover:shadow-xl transition">
               <img src={blog.image} alt={blog.title} className="h-48 w-full object-cover" />
               <div className="p-5">
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{blog.title}</h3>

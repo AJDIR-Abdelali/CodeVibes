@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import logo from '../../assets/images/logo-modified.png';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -23,6 +24,7 @@ const Navbar = () => {
     // TODO: Add login logic here (API call etc.)
     setShowLoginModal(false);
   };
+  const navigate = useNavigate();
 
   return (
     <header className="bg-white shadow-lg relative z-50">
@@ -52,7 +54,7 @@ const Navbar = () => {
           </div>
 
           <nav className="hidden md:flex space-x-10 items-center text-lg">
-            <button onClick={() => scrollToSection('home')} className="font-medium text-gray-700 hover:text-indigo-600">Home</button>
+            <button onClick={() => navigate("/")} className="font-medium text-gray-700 hover:text-indigo-600">Home</button>
             <button onClick={() => scrollToSection('about')} className="font-medium text-gray-700 hover:text-indigo-600">About</button>
             <button onClick={() => scrollToSection('features')} className="font-medium text-gray-700 hover:text-indigo-600">Features</button>
             <button onClick={() => scrollToSection('pricing')} className="font-medium text-gray-700 hover:text-indigo-600">Pricing</button>
