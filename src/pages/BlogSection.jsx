@@ -65,7 +65,7 @@ const BlogSection = () => {
   const allBlogsVisible = visibleBlogs >= blogs.length;
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section id = "blogs" className="py-20 bg-gray-50">
       <div className="max-w-6xl mx-auto px-4 text-center">
         <h2 className="text-4xl font-bold mb-12 text-gray-800">Latest Blog Posts</h2>
 

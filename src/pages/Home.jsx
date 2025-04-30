@@ -5,7 +5,7 @@ import React from 'react';
 import home from '../assets/images/home.jpg'; // Replace with your image path
 const Home = () => {
   return (
-    <section
+    <section id="home"
       className="relative bg-cover bg-center bg-no-repeat py-32 px-6 text-white"
       style={{
         backgroundImage:

@@ -8,6 +8,14 @@ const Navbar = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      section.scrollIntoView({ behavior: 'smooth' });
+      setIsMenuOpen(false); // close mobile menu if open
+    }
+  };
+
   return (
     <header className="bg-white shadow-lg">
       <div className="container mx-auto px-6">
@@ -42,21 +50,34 @@ const Navbar = () => {
 
           {/* Desktop navigation */}
           <nav className="hidden md:flex space-x-10 items-center text-lg">
-            <a href="/" className="font-medium text-gray-700 hover:text-indigo-600">
+            {/* <a href="/" className="font-medium text-gray-700 hover:text-indigo-600"> */}
+            <button onClick={() => scrollToSection('home')} className="font-medium text-gray-700 hover:text-indigo-600">
+
               Home
-            </a>
-            <a href="/about" className="font-medium text-gray-700 hover:text-indigo-600">
+            </button>
+            <button onClick={() => scrollToSection('about')} className="font-medium text-gray-700 hover:text-indigo-600">
+
               About
-            </a>
-            <a href="/features" className="font-medium text-gray-700 hover:text-indigo-600">
+              </button>
+              <button onClick={() => scrollToSection('features')} className="font-medium text-gray-700 hover:text-indigo-600">
+
               Features
-            </a>
-            <a href="/pricing" className="font-medium text-gray-700 hover:text-indigo-600">
-              Pricing
-            </a>
+                </button>
+            
+                <button onClick={() => scrollToSection('pricing')} className="font-medium text-gray-700 hover:text-indigo-600">
+
+                Pricing
+                </button>
+           
+           
+          
+            <button onClick={() => scrollToSection('blogs')} className="font-medium text-gray-700 hover:text-indigo-600">
+              Blogs
+            </button>
             <a href="/login" className="ml-4 text-white bg-indigo-600 hover:bg-indigo-700 font-semibold py-2 px-6 rounded-xl transition duration-300">
               Login
             </a>
+
           </nav>
         </div>
 
