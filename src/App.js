@@ -1,15 +1,19 @@
 import React from 'react';
 import Navbar from './components/layout/Navbar';
-import Layout from './components/layout/Layout.jsx';
 import Home from './pages/Home';
 import BlogSection from './pages/BlogSection';
+import About from './pages/About';
+import Features from './pages/Features';
+import Pricing from './pages/Pricing';
 
 function App() {
   return (
     <div className="min-h-screen">
-    
       <Navbar />
       <Home/>
+      <About />
+      <Features/>
+      <Pricing />
       <BlogSection />
       <main className="py-8">
         <div className="container mx-auto px-4">
