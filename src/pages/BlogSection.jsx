@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 // Import your local images
 import blog1 from '../assets/images/indie games.jpg';
@@ -80,7 +81,7 @@ const BlogSection = () => {
           ))}
         </div>
 
-        <div className="mt-8">
+        {/* <div className="mt-8">
           <button
             onClick={loadMoreBlogs}
             disabled={allBlogsVisible}
@@ -92,7 +93,16 @@ const BlogSection = () => {
           >
             {allBlogsVisible ? 'No More Posts' : 'Load More'}
           </button>
-        </div>
+        </div> */}
+
+<div className="mt-8">
+  <Link 
+    to="/blogs"
+    className="bg-indigo-600 text-white px-6 py-3 rounded-md hover:bg-indigo-500 focus:outline-none transition"
+  >
+    Load More
+  </Link>
+</div>
       </div>
     </section>
   );
