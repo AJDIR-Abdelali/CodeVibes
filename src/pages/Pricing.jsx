@@ -54,7 +54,7 @@ const Pricing = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-gray-50 to-indigo-50">
+    <div id = "pricing" className="min-h-screen bg-gradient-to-b from-gray-50 to-indigo-50">
       {/* Hero Section */}
       <div className="bg-indigo-600 py-16 text-white">
         <div className="container mx-auto px-6 text-center">

@@ -6,7 +6,7 @@ import about4 from'../assets/images/about4.jpg'
  
 const About = () => {
   return (
-    <section className="flex flex-col-reverse lg:flex-row items-center justify-between px-8 py-16 bg-gradient-to-r from-[#1e1e2f] to-[#292942] text-white">
+    <section id = "about" className="flex flex-col-reverse lg:flex-row items-center justify-between px-8 py-16 bg-gradient-to-r from-[#1e1e2f] to-[#292942] text-white">
       <div className="lg:w-1/2 max-w-xl">
         <h1 className="text-4xl md:text-5xl font-bold mb-6">Welcome to GameVerse</h1>
         <p className="text-lg leading-relaxed text-gray-300">
